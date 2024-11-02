@@ -1,4 +1,4 @@
-# Iconduit browser configuration loader
+# Browser configuration loader
 
 _A Webpack loader for `browserconfig.xml` files_
 
