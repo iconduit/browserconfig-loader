@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tile>
+  <visual lang="en-US" version="2">
+    <binding template="TileWide310x150Image" branding="logo" fallback="TileSquareImage"
+      contentId="139914">
+      <image id="1"
+        src="https://example.com/notification-5.png"
+        alt="Notification image 5" addImageQuery="true" />
+    </binding>
+  </visual>
+</tile>

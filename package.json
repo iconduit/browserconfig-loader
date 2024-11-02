@@ -1,0 +1,83 @@
+{
+  "name": "@iconduit/browserconfig-loader",
+  "version": "0.0.0",
+  "description": "A Webpack loader for browserconfig.xml files",
+  "keywords": [
+    "app",
+    "browser",
+    "browserconfig",
+    "config",
+    "iconduit",
+    "import",
+    "loader",
+    "web",
+    "webpack"
+  ],
+  "repository": "iconduit/browserconfig-loader",
+  "bugs": "https://github.com/iconduit/browserconfig-loader/issues",
+  "homepage": "https://github.com/iconduit/browserconfig-loader",
+  "author": "Erin Millard <contact@erin.id.au>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "types": "artifacts/dist/esm/index.d.ts",
+  "main": "artifacts/dist/esm/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./artifacts/dist/esm/index.d.ts",
+        "default": "./artifacts/dist/esm/index.js"
+      },
+      "require": {
+        "types": "./artifacts/dist/cjs/index.d.ts",
+        "default": "./artifacts/dist/cjs/index.js"
+      },
+      "default": {
+        "types": "./artifacts/dist/esm/index.d.ts",
+        "default": "./artifacts/dist/esm/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "/artifacts/dist/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepublishOnly": "make artifacts/dist"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.5.0",
+    "loader-utils": "^3.3.1"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.4",
+    "@eslint/js": "^9.13.0",
+    "@skypack/package-check": "^0.2.2",
+    "@types/eslint__js": "^8.42.3",
+    "@types/loader-utils": "^2.0.6",
+    "@types/node": "^22.8.5",
+    "@vitest/coverage-v8": "^2.1.4",
+    "@vitest/eslint-plugin": "^1.1.7",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.12.0",
+    "eslint-plugin-promise": "^7.1.0",
+    "globals": "^15.11.0",
+    "html-bundler-webpack-plugin": "^4.1.4",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "publint": "^0.2.12",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.12.2",
+    "vitest": "^2.1.4",
+    "webpack": "^5 <5.96.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
