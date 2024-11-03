@@ -5,7 +5,7 @@ export default defineConfig({
     watch: false,
     include: ["test/suite/**/*.spec.ts"],
     coverage: {
-      include: ["artifacts/dist/esm/**/*.js"],
+      include: ["artifacts/dist/**/*.js"],
     },
   },
 });

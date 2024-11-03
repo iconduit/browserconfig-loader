@@ -71,7 +71,7 @@ const browserConfigLoader: LoaderDefinitionFunction = function (source) {
   })(this.async());
 };
 
-export default browserConfigLoader;
+module.exports = browserConfigLoader;
 
 function hasProperty<T extends string>(
   obj: unknown,
