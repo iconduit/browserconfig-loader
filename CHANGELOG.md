@@ -10,6 +10,18 @@ Versioning].
 
 ## Unreleased
 
+## [v0.2.0] - 2024-11-03
+
+[v0.2.0]: https://github.com/iconduit/browserconfig-loader/releases/tag/v0.2.0
+
+### Changed
+
+- **\[BREAKING\]** This package is now CommonJS only.
+
+### Fixed
+
+- This loader now works with Webpack `5.96.0` and later.
+
 ## [v0.1.0] - 2024-11-02
 
 [v0.1.0]: https://github.com/iconduit/browserconfig-loader/releases/tag/v0.1.0
