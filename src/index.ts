@@ -3,6 +3,8 @@ import { resolve } from "path";
 import { callbackify } from "util";
 import type { LoaderDefinitionFunction } from "webpack";
 
+const subLoaderPath = require.resolve("./sub-loader.js");
+
 const browserConfigLoader: LoaderDefinitionFunction = function (source) {
   const XMLOptions = {
     attributeNamePrefix: "@_",
@@ -24,7 +26,9 @@ const browserConfigLoader: LoaderDefinitionFunction = function (source) {
   const loadSrc = async (obj: unknown): Promise<void> => {
     if (!hasProperty(obj, "@_src") || typeof obj["@_src"] !== "string") return;
 
-    obj["@_src"] = await this.importModule(resolve(this.context, obj["@_src"]));
+    obj["@_src"] = await this.importModule(
+      `!!${subLoaderPath}!${resolve(this.context, obj["@_src"])}`,
+    );
   };
 
   if (hasProperty(msapplication, "tile")) {
