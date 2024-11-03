@@ -14,7 +14,9 @@ function createWebpackConfig(fixture) {
     mode: "production",
     devtool: "source-map",
     context: resolve(__dirname, "fixture", fixture),
-    entry: "./index.html",
+    entry: {
+      index: "./index.html",
+    },
     output: {
       path: resolve(__dirname, "../artifacts/test/output", fixture),
       filename: "bundle.js",
@@ -23,9 +25,6 @@ function createWebpackConfig(fixture) {
     },
     plugins: [
       new HtmlBundlerPlugin({
-        entry: {
-          index: "index.html",
-        },
         loaderOptions: {
           sources: [
             {
