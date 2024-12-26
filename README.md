@@ -18,9 +18,9 @@ _A Webpack loader for `browserconfig.xml` files_
 [badge-npm-version-link]:
   https://npmjs.com/package/@iconduit/browserconfig-loader
 
-This loader processes [browser configuration] files, adding any images or polling
-URI assets to the bundle and resolving their URLs in the output browser configuration
-file.
+This loader processes [browser configuration] files, adding any images or
+polling URI assets to the bundle and resolving their URLs in the output browser
+configuration file.
 
 [browser configuration]: https://msdn.microsoft.com/library/dn320426(v%3Dvs.85)
 
