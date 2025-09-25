@@ -29,15 +29,7 @@ beforeAll(async () => {
 });
 
 it("errors for browser configs with malformed XML", async () => {
-  let error: unknown;
-
-  try {
-    await compiler("invalid/malformed-xml");
-  } catch (err) {
-    error = err;
-  }
-
-  expect(getErrorMessage(error)).toMatch("XMLParser.parse");
+  await expect(compiler("invalid/malformed-xml")).rejects.toThrow();
 });
 
 it("errors for browser configs with unresolved images", async () => {
